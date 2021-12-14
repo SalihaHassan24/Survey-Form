@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+        body {
+  background-image: url("");
+    margin: 40px 0 40px 0;
+    background-color: purple;
+    font-family: sans-serif;
+}
+
+main {
+    background-color: white;
+    padding: 10px 40px 40px 40px;
+    text-align: left;
+    max-width: 500px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    color: #191516;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    font-size: 22px;
+}
+
+#name, #email, #number, #dropdown {
+    outline: none;
+    width: 100%;
+    padding: 7px;
+    font-size: 16px;
+    border: 0.5px solid #002f6c;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+#dropdown, option {
+    outline: none;
+}
+
+select {
+    padding: 7px;
+}
+
+textarea {
+    display: block;
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    height: 200px;
+    resize: none;
+    padding: 4px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    display: block;
+    height: 40px;
+    background-color: #191516;
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    box-sizing: border-box;
+}
+
+#description {
+    text-align: center;
+    font-style: italic;
+    margin-top: -10px;
+}
+
+@media (max-width: 460px) {
+    main {
+        max-width: 280px;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    #description {
+        font-size: 15px;
+    }
+    form {
+        font-size: 18px;
+    }
+    #name, #email, #number, #dropdown, textarea {
+        font-size: 15px;
+    }
+ </style>
+</head>
+<body>
+    <main>
+        <header>
+        <h1 id="title">University Survey Form</h1>
+        <p id="description">Thank You For Coming</p>
+        </header>
+        <form id="survey-form">
+          <div>
+            <label for="name" id="name-label">Name</label><input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+          </div>
+          <div>
+            <label for="email" id="email-label">Email</label><input type="text" id="email" name="email" placeholder="Enter Your Email" required>
+          </div>
+          <div>
+            <label for="age" id="number-label">Age</label><input type="number" name="age" id="number" min="1" max="99" placeholder="Enter Your Age">
+          </div>
+          <div>
+            <label for="uni">University</label><select id="dropdown" name="uni" required>
+            <option disabled selected value>Select Your University</option>
+            <option value="stanford">Stanford University</option>
+            <option value="harvard">Harvard University</option>
+            <option value="oxford">University of  Oxford</option>
+            <option value="other">Other</option>
+            </select>
+          </div>
+          <div>
+            <label>Do you like your university?</label>
+            <div>
+            <label for="yes"><input id="yes" type="radio" name="yes-no">Yes</label>
+            </div>
+            <div>
+            <label for="no"><input id="no" type="radio" name="yes-no">No</label>
+            </div>
+          </div>
+          <div>
+            <label>What do you like about your University?</label>
+            <div>
+            <label><input value="faculty" type="checkbox" name="things">Faculty</label>
+            </div>
+            <div>
+            <label><input value="environment" type="checkbox" name="things">Environment</label>
+            </div>
+            <div>
+            <label><input value="CampusLife" type="checkbox" name="things">Campus Life</label>
+            </div>
+            <div>
+            <label><input value="library" type="checkbox" name="things">Library</label>
+            </div>
+            <div>
+            <label><input value="none" type="checkbox" name="things">None</label>
+            </div>
+          </div>
+          <div>
+            <label for="comment">Write a comment about your university</label>
+                        <textarea name="comment" id="comment" placeholder="Enter your comment here..."></textarea>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+        </main>
+</body>
+</html>
